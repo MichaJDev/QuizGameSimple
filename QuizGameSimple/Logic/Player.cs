@@ -11,6 +11,6 @@ namespace QuizGameSimple.Logic
         public int Id { get; set; }
         public string Name { get; set; }
         public int Highscore { get; set; }
-        public List<Quiz> quizzes { get; set; }
+        public List<Quiz> CompletedQuizzes { get; set; }
     }
 }

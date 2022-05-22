@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gK8UlFnvh68UKJPrUDSogap+BaH6HvIYIwmEOQOw8v9caoAW1KpqufrsFmm4/mQ3WsHMugiPzQvVzSIVYjcYrg==",
+  "dgSpecHash": "AMddoax9ystpZyjiuIuK9pyvRASB+mAKeDbVlNHeWSD9SrBzekQnp6RaEAHYCx8mwQTs7AaRUSGkQKUPdsnjeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\xflak\\source\\repos\\QuizGameSimple\\QuizGameSimple\\QuizGameSimple.csproj",
+  "projectFilePath": "G:\\GitHub\\QuizGameSimple\\QuizGameSimple\\QuizGameSimple.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xflak\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\xflak\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
