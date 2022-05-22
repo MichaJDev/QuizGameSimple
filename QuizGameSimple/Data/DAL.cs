@@ -39,14 +39,12 @@ namespace QuizGameSimple.Data
             using SqlCommand cmd = new(sql, con);
 
             cmd.Parameters.AddWithValue("@desc", q.Description);
+            cmd.Parameters.AddWithValue("@diff", q.Score);
 
             foreach (Answer answer in q.Answers)
             {
                 CreateAnswer(answer);
             }
-            cmd.Parameters.AddWithValue("@diff", q.Score);
-
-
             try
             {
                 cmd.ExecuteNonQuery();
