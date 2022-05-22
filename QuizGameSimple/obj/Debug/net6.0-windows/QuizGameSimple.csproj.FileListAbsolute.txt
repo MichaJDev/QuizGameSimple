@@ -1,0 +1,17 @@
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\bin\Debug\net6.0-windows\QuizGameSimple.exe
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\bin\Debug\net6.0-windows\QuizGameSimple.deps.json
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\bin\Debug\net6.0-windows\QuizGameSimple.runtimeconfig.json
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\bin\Debug\net6.0-windows\QuizGameSimple.dll
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\bin\Debug\net6.0-windows\QuizGameSimple.pdb
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\obj\Debug\net6.0-windows\QuizGameSimple.csproj.AssemblyReference.cache
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\obj\Debug\net6.0-windows\QuizGameSimple.Form1.resources
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\obj\Debug\net6.0-windows\QuizGameSimple.csproj.GenerateResource.cache
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\obj\Debug\net6.0-windows\QuizGameSimple.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\obj\Debug\net6.0-windows\QuizGameSimple.AssemblyInfoInputs.cache
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\obj\Debug\net6.0-windows\QuizGameSimple.AssemblyInfo.cs
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\obj\Debug\net6.0-windows\QuizGameSimple.csproj.CoreCompileInputs.cache
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\obj\Debug\net6.0-windows\QuizGameSimple.dll
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\obj\Debug\net6.0-windows\refint\QuizGameSimple.dll
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\obj\Debug\net6.0-windows\QuizGameSimple.pdb
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\obj\Debug\net6.0-windows\QuizGameSimple.genruntimeconfig.cache
+C:\Users\xflak\source\repos\QuizGameSimple\QuizGameSimple\obj\Debug\net6.0-windows\ref\QuizGameSimple.dll
