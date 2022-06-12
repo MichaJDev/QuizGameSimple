@@ -13,6 +13,8 @@ namespace QuizGameSimple.Logic
         public List<Question> Questions { get; set; }
         public Difficulty Difficulty { get; set; }
         public int MinimumCorrect { get; set; }
+        
+        private Label qLbl, ans1Lbl, ans2Lbl, ans3Lbl;
 
         public void Save()
         {
@@ -38,42 +40,36 @@ namespace QuizGameSimple.Logic
             dal.DeleteQuiz(this);
         }
 
-        public void Start(Panel p)
+        public void Play(Panel p)
         {
-            while (Running)
-            {
-                for (int y = 0; y < Questions.Count - 1; y++)
-                {
-
-                    Question q = Questions[y];
-                    if (q != null)
-                    {
-                        if (!q.IsAnswered)
-                        {
-                            Label questionLbl = (Label)p.Controls.OfType<Label>().Where(x => x.Name.Contains($"Question{Questions.Count - 1}"));
-
-                            questionLbl.Text = q.Description;
-                            for (int i = 0; i < q.Answers.Count - 1; i++)
-                            {
-                                Label answerLbl = (Label)p.Controls.OfType<Label>().Where(x => x.Name.Contains($"Answer{i}"));
-                                answerLbl.Text = q.Answers[i].Description;
-                            }
-                        }
-                    }
-                }
-            }
+           
         }
-        public void AnswerQuestion(Question q, Answer a)
+        public void AskQuestion(Panel p)
         {
-            q.IsAnswered = true;
-            if (q.GivenAnswer == q.CorrectAnswer)
+            Question q = Questions.First();
+            
+
+            foreach(Control c in p.Controls)
             {
-                q.IsCorrect = true;
-                Questions.Remove(q);
-            }
-            else
-            {
-                q.IsCorrect = false;
+                switch(c.Name)
+                {
+                    case "qLbl":
+                        qLbl = (Label) c;
+                        qLbl.Text = q.Description;
+                        break;
+                    case "ans1Lbl":
+                        ans1Lbl = (Label) c;
+                        ans1Lbl.Text = q.Answers[0].Description;
+                        break;
+                    case "ans2Lbl":
+                        ans2Lbl = (Label)c;
+                        ans2Lbl.Text = q.Answers[1].Description;
+                        break;
+                    case "ans3Lbl":
+                        ans3Lbl = (Label)c;
+                        ans3Lbl.Text = q.Answers[2].Description;
+                        break;
+                }
             }
         }
     }

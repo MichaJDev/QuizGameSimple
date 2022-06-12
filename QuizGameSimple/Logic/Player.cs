@@ -45,5 +45,15 @@ namespace QuizGameSimple.Logic
                 dal.CreatePlayer(this);
             }
         } 
+
+        public List<Player> GetAll()
+        {
+            return dal.ReadAllPlayers();
+        }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

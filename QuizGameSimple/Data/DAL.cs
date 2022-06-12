@@ -173,7 +173,25 @@ namespace QuizGameSimple.Data
             }
             return p;
         }
+        public List<Player> ReadAllPlayers()
+        {
+            List<Player> players = new();
+            Player p = new();
+            using SqlConnection con = new(conString);
+            con.Open();
+            string sql = "Select * From Players";
+            using SqlCommand cmd = new(sql, con);
+            SqlDataReader r = cmd.ExecuteReader();
+            while (r.Read())
+            {
+                p.Id = r.GetInt32(0);
+                p.Name = r.GetString(1);
+                p.Highscore = r.GetInt32(2);
+                players.Add(p);
+            }
 
+            return players;
+        }
         public List<Quiz> ReadAllQuizzes()
         {
             List<Quiz> quizzes = new();
@@ -418,7 +436,7 @@ namespace QuizGameSimple.Data
         {
             for (int i = 0; i < p.CompletedQuizzes.Count; i++)
             {
-                Quiz q= p.CompletedQuizzes[i];
+                Quiz q = p.CompletedQuizzes[i];
                 DeleteCompletedQuiz(q, p);
             }
             using SqlConnection con = new(conString);
