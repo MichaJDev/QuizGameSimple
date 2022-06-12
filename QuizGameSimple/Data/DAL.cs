@@ -306,9 +306,9 @@ namespace QuizGameSimple.Data
             using SqlCommand cmd = new(sql, con);
             cmd.Parameters.AddWithValue("@Pid", p.Id);
             int count = (int)cmd.ExecuteScalar();
-            if (count < p.CompletedQuizzes.Count())
+            if (count < p.CompletedQuizzes.Count)
             {
-                int newCount = p.CompletedQuizzes.Count() - count;
+                int newCount = p.CompletedQuizzes.Count - count;
                 for (int i = 0; i < newCount; i++)
                 {
                     if (i > count)
@@ -416,9 +416,10 @@ namespace QuizGameSimple.Data
         }
         public void DeletePlayer(Player p)
         {
-            foreach (Quiz q in p.CompletedQuizzes)
+            for (int i = 0; i < p.CompletedQuizzes.Count; i++)
             {
-                DeleteCompletedQuiz(p);
+                Quiz q= p.CompletedQuizzes[i];
+                DeleteCompletedQuiz(q, p);
             }
             using SqlConnection con = new(conString);
             con.Open();
@@ -435,7 +436,7 @@ namespace QuizGameSimple.Data
             }
 
         }
-        public void DeleteCompletedQuiz(Player p)
+        public void DeleteCompletedQuiz(Quiz q, Player p)
         {
             using SqlConnection con = new(conString);
             con.Open();
@@ -452,7 +453,7 @@ namespace QuizGameSimple.Data
                 Console.WriteLine(ex.ToString());
             }
         }
-        private Difficulty ParseDifficulty(string s)
+        private static Difficulty ParseDifficulty(string s)
         {
             Difficulty d = Difficulty.NONE;
             switch (s)
@@ -470,7 +471,7 @@ namespace QuizGameSimple.Data
             return d;
         }
 
-        private string StringifyDifficulty(Difficulty d)
+        private static string StringifyDifficulty(Difficulty d)
         {
             if (d == Difficulty.EASY)
             {
